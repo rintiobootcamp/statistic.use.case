@@ -9,6 +9,7 @@ import com.bootcamp.entities.LikeTable;
 import com.bootcamp.helpers.*;
 import com.google.gson.Gson;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -108,7 +109,7 @@ public class StatisticService {
 
                 newEndDate = addPas(newEndDate,unite,pas);
 
-                } while (newEndDate.compareTo(endDate) <= 0);
+                } while (newEndDate.compareTo(endDate) <= 0 || (endDate.compareTo(newStartDate) >= 0 && endDate.compareTo(newEndDate) <= 0));
 
                  System.out.println(gson.toJson(returnList));
 

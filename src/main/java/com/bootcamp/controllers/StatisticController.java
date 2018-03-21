@@ -28,7 +28,7 @@ import java.util.List;
 public class StatisticController {
 
     @Autowired
-    StatisticService statisticService;
+    private StatisticService statisticService;
 
     /**
      *
