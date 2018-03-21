@@ -127,10 +127,12 @@ public class StatisticService {
                     newEndDate.add(Calendar.DAY_OF_MONTH,(7*pas)-1);
                 }else
                     if (unite.equalsIgnoreCase("MOIS")){
-                        newEndDate.add(Calendar.MONTH,pas-1);
+                        newEndDate.add(Calendar.MONTH,pas);
+                        newEndDate.add(Calendar.DAY_OF_MONTH,-1);
                     }else
                         if (unite.equalsIgnoreCase("ANNEE")){
-                            newEndDate.add(Calendar.YEAR,pas-1);
+                            newEndDate.add(Calendar.YEAR,pas);
+                            newEndDate.add(Calendar.DAY_OF_MONTH,-1);
                         }
 
                         return newEndDate;
